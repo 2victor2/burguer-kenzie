@@ -24,7 +24,10 @@ function App() {
   }
   return <div className="App">
     <Header />
-    <ProductsList data={productsList} cartData={currentSale} setCartData={setCurrentSale} />
+    <main>
+      <ProductsList data={productsList} cartData={currentSale} setCartData={setCurrentSale} />
+
+    </main>
   </div>;
 }
 
