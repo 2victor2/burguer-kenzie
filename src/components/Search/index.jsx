@@ -2,8 +2,7 @@ import "./styles.css";
 import Button from "../Button";
 import { useState } from "react";
 
-const Search = ({ callback }) => {
-  const [userSearch, setUserSearch] = useState("");
+const Search = ({ userSearch, setUserSearch, callback }) => {
   return (
     <form className="search-container">
       <input
@@ -12,9 +11,11 @@ const Search = ({ callback }) => {
         id="input-search"
         placeholder="Digitar Pesquisa"
         defaultValue={userSearch}
-        onKeyUp={(e) => setUserSearch(e.target.value.toUpperCase())}
+        onKeyUp={(e) => setUserSearch(e.target.value)}
       />
-      <Button callback={callback} classname="add-button">Pesquisar</Button>
+      <Button callback={callback} classname="add-button">
+        Pesquisar
+      </Button>
     </form>
   );
 };

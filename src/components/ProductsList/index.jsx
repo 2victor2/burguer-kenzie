@@ -1,13 +1,18 @@
-import "./styles.css"
-import Product from "../Product"
+import "./styles.css";
+import Product from "../Product";
 
-const ProductsList = ({ data, cartData, setCartData}) => {
+const ProductsList = ({ data, handleClick }) => {
+  return (
+    <ul className="products-list">
+      {data.map((product) => (
+        <Product
+          key={product.id}
+          product={product}
+          callback={handleClick}
+        />
+      ))}
+    </ul>
+  );
+};
 
-    return (
-        <ul className="products-list">
-            {data.map(product => <Product key={product.id} product={product} />)}
-        </ul>
-    )
-}
-
-export default ProductsList
+export default ProductsList;

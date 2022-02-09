@@ -2,7 +2,7 @@ import Button from "../Button";
 import "./styles.css";
 
 const Product = ({ product, callback }) => {
-  const { name, category, price, img } = product;
+  const { id, name, category, price, img } = product;
   return (
     <li className="product-card">
       <figure className="product-img-container">
@@ -17,7 +17,12 @@ const Product = ({ product, callback }) => {
             currency: "BRL",
           })}
         </span>
-        <Button callback={callback} classname="add-button">
+        <Button
+          callback={() => {
+            callback(id);
+          }}
+          classname="add-button"
+        >
           Adicionar
         </Button>
       </div>

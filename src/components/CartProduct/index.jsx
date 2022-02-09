@@ -1,7 +1,7 @@
 import "./styles.css";
 
 const CartProduct = ({ product, handleClick }) => {
-  const { name, category, img } = product;
+  const { id, name, category, img } = product;
   return (
     <li className="cart-product">
       <figure className="product-cart-img-container">
@@ -11,9 +11,16 @@ const CartProduct = ({ product, handleClick }) => {
         <h4 className="name">{name}</h4>
         <p className="category">{category}</p>
       </div>
-      <span className="remove" onClick={handleClick}>Remover</span>  
+      <span
+        className="remove"
+        onClick={() => {
+          handleClick(id);
+        }}
+      >
+        Remover
+      </span>
     </li>
   );
 };
 
-export default CartProduct
+export default CartProduct;
