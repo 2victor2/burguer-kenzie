@@ -12,6 +12,7 @@ const Search = ({ userSearch, setUserSearch, callback }) => {
         placeholder="Digitar Pesquisa"
         defaultValue={userSearch}
         onKeyUp={(e) => setUserSearch(e.target.value)}
+        onChange={callback}
       />
       <Button callback={callback} classname="add-button">
         Pesquisar

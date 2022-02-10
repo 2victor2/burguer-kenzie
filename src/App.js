@@ -26,8 +26,8 @@ function App() {
     setFilteredList(
       productsList.filter(
         ({ name, category }) =>
-          userSearch.toUpperCase() === name.toUpperCase() ||
-          userSearch.toUpperCase() === category.toUpperCase()
+          name.toUpperCase().includes(userSearch.toUpperCase()) ||
+          category.toUpperCase().includes(userSearch.toUpperCase())
       )
     );
 
