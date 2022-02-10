@@ -1,6 +1,6 @@
 .cart-container {
   margin: 20px auto;
-  width: 365px;
+  width: 320px;
 }
 
 .cart-header {
@@ -44,5 +44,7 @@
 @media screen and (min-width: 1024px) {
   .cart-container {
     margin: 20px;
+    width: 365px;
   }
+  
 }

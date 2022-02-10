@@ -1,5 +1,5 @@
 .search-container {
-  width: 365px;
+  width: 320px;
   height: 60px;
   display: flex;
   flex-direction: row;
@@ -18,7 +18,7 @@
 }
 
 .search-container:focus-within {
-  border: 2px solid #333;  
+  border: 2px solid #333;
 }
 
 #input-search:focus {
@@ -28,4 +28,10 @@
 #input-search::placeholder {
   color: #e0e0e0;
   font: 16px "Inter", sans-serif;
+}
+
+@media screen and (min-width: 880px) {
+  .search-container {
+    width: 365px;
+  }
 }
